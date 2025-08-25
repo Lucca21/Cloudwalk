@@ -84,7 +84,7 @@ def check_transaction(transaction: Transaction):
 
 
 # -----------------------------
-# 5️⃣ Endpoint GET para histórico (CSV + novos dados)
+# Endpoint GET to return new data from the API (Used to plot the dashboard)
 # -----------------------------
 @app.get("/history_counts")
 def get_history_counts():
@@ -100,3 +100,4 @@ def get_history_counts():
     # Order by minute
     historico = sorted(historico, key=lambda x: x["minute"])
     return historico
+
